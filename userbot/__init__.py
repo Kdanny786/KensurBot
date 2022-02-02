@@ -50,7 +50,7 @@ if sys.version_info[0] < 3 or sys.version_info[1] < 9:
 # Check if the config was edited by using the already used variable.
 # Basically, its the 'virginity check' for the config file ;)
 CONFIG_CHECK = os.environ.get(
-    "___________PLOX_______REMOVE_____THIS_____LINE__________"
+    ""
 )
 
 if CONFIG_CHECK:
@@ -60,8 +60,8 @@ if CONFIG_CHECK:
     sys.exit(1)
 
 # Telegram App KEY and HASH
-API_KEY = int(os.environ.get("API_KEY", 0))
-API_HASH = str(os.environ.get("API_HASH"))
+API_KEY = int(os.environ.get("API_KEY","626705"))
+API_HASH = str(os.environ.get("API_HASH","49465d9bcd850334258871da8c392f1b"))
 
 # Userbot Session String
 STRING_SESSION = os.environ.get("STRING_SESSION")
@@ -74,7 +74,7 @@ BOTLOG = strtobool(os.environ.get("BOTLOG", "False"))
 LOGSPAMMER = strtobool(os.environ.get("LOGSPAMMER", "False"))
 
 # Bleep Blop, this is a bot ;)
-PM_AUTO_BAN = strtobool(os.environ.get("PM_AUTO_BAN", "False"))
+PM_AUTO_BAN = strtobool(os.environ.get("PM_AUTO_BAN", "True"))
 
 # Heroku Credentials for updater.
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME")
